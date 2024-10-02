@@ -1,10 +1,9 @@
 --!strict
-local Packages = script.Parent.Parent.Parent
-local Otter = require(Packages.Otter)
+local Otter = require("@pkg/@jsdotlua/react-otter")
 
-local measureAndReport = require(script.Parent.Parent.measureAndReport)
+local measureAndReport = require("../measureAndReport")
 
-local randomSpringGoal = require(script.Parent.randomSpringGoal)
+local randomSpringGoal = require("./randomSpringGoal")
 
 local STEP_COUNT = 10000
 

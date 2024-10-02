@@ -1,10 +1,8 @@
 --!strict
-local Packages = script.Parent.Parent
+local Otter = require("@pkg/@jsdotlua/react-otter")
+local Roact = require("@pkg/@jsdotlua/roact-compat")
 
-local Otter = require(Packages.Otter)
-local Roact = require(Packages.Roact)
-
-local measureAndReport = require(script.Parent.measureAndReport)
+local measureAndReport = require("./measureAndReport")
 
 local STEP_COUNT = 10000
 

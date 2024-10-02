@@ -1,6 +1,5 @@
 --!strict
-local Packages = script.Parent.Parent.Parent
-local Roact = require(Packages.Roact)
+local Roact = require("@pkg/@jsdotlua/roact-compat")
 
 local function Buttons(_)
 	return Roact.createFragment({

@@ -1,9 +1,8 @@
 --!strict
-local Packages = script.Parent.Parent.Parent
-local Otter = require(Packages.Otter)
-local React = require(Packages.React)
+local Otter = require("@pkg/@jsdotlua/react-otter")
+local React = require("@pkg/@jsdotlua/react")
 
-local Buttons = require(script.Parent.Buttons)
+local Buttons = require("./Buttons")
 
 local ClassWithState = React.Component:extend("ClassWithState")
 

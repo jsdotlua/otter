@@ -1,7 +1,6 @@
 --!strict
-local Packages = script.Parent.Parent.Parent
-local React = require(Packages.React)
-local ReactOtter = require(Packages.ReactOtter)
+local React = require("@pkg/@jsdotlua/react")
+local ReactOtter = require("@pkg/@jsdotlua/react-otter")
 
 local function ComplexChild(props: { LayoutOrder: number, level: number, Size: UDim2 }): React.ReactElement<any>
 	if props.level == 1 then

@@ -1,18 +1,18 @@
 --!strict
-local ClassWithBinding = require(script.Components.ClassWithBinding)
-local ClassWithState = require(script.Components.ClassWithState)
-local FunctionWithBinding = require(script.Components.FunctionWithBinding)
-local FunctionWithState = require(script.Components.FunctionWithState)
-local Hook = require(script.Components.Hook)
-local Scroller = require(script.Components.Scroller)
-local Resizer = require(script.Components.Resizer)
+local ClassWithBinding = require("./Components/ClassWithBinding")
+local ClassWithState = require("./Components/ClassWithState")
+local FunctionWithBinding = require("./Components/FunctionWithBinding")
+local FunctionWithState = require("./Components/FunctionWithState")
+local Hook = require("./Components/Hook")
+local Scroller = require("./Components/Scroller")
+local Resizer = require("./Components/Resizer")
 
-local legacyClassWithBinding = require(script.Legacy.ClassWithBinding)
-local legacyClassWithState = require(script.Legacy.ClassWithState)
+local legacyClassWithBinding = require("./Legacy/ClassWithBinding")
+local legacyClassWithState = require("./Legacy/ClassWithState")
 
-local runBenchmark = require(script.runBenchmark)
-local runLegacyBenchmark = require(script.runLegacyBenchmark)
-local runFPSBenchmark = require(script.runFPSBenchmark)
+local runBenchmark = require("./runBenchmark")
+local runLegacyBenchmark = require("./runLegacyBenchmark")
+local runFPSBenchmark = require("./runFPSBenchmark")
 
 local RunService = game:GetService("RunService")
 
@@ -38,9 +38,9 @@ return {
 	legacyClassWithBinding = function()
 		runLegacyBenchmark(legacyClassWithBinding)
 	end,
-	spring = require(script.Goals.spring),
-	hookWithSpring = require(script.Goals.HookWithSpring),
-	legacyWithSpring = require(script.Goals.LegacyWithSpring),
+	spring = require("./Goals/spring"),
+	hookWithSpring = require("./Goals/HookWithSpring"),
+	legacyWithSpring = require("./Goals/LegacyWithSpring"),
 	heartbeatScrolling = function()
 		runFPSBenchmark(Scroller, RunService.Heartbeat, 3800)
 	end,

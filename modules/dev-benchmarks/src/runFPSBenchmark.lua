@@ -1,9 +1,7 @@
 --!strict
-local Packages = script.Parent.Parent
-
-local Otter = require(Packages.Otter)
-local React = require(Packages.React)
-local ReactRoblox = require(Packages.ReactRoblox)
+local Otter = require("@pkg/@jsdotlua/react-otter")
+local React = require("@pkg/@jsdotlua/react")
+local ReactRoblox = require("@pkg/@jsdotlua/react-roblox")
 
 local function runFPSBenchmark(component, runServiceSignal: RBXScriptSignal, goal: number)
 	local complete = false

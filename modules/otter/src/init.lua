@@ -1,12 +1,12 @@
 --!strict
-local createGroupMotor = require(script.createGroupMotor)
-local createSingleMotor = require(script.createSingleMotor)
-local ease = require(script.ease)
-local spring = require(script.spring)
-local instant = require(script.instant)
-local types = require(script.types)
+local createGroupMotor = require("./createGroupMotor")
+local createSingleMotor = require("./createSingleMotor")
+local ease = require("./ease")
+local spring = require("./spring")
+local instant = require("./instant")
+local types = require("./types")
 
-local AnimationStepSignal = require(script.AnimationStepSignal)
+local AnimationStepSignal = require("./AnimationStepSignal")
 
 export type Goal<T> = types.Goal<T>
 export type Motor<T, U> = types.Motor<T, U>

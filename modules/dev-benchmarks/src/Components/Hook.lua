@@ -1,9 +1,8 @@
 --!strict
-local Packages = script.Parent.Parent.Parent
-local React = require(Packages.React)
-local ReactOtter = require(Packages.ReactOtter)
+local React = require("@pkg/@jsdotlua/react")
+local ReactOtter = require("@pkg/@jsdotlua/react-otter")
 
-local Buttons = require(script.Parent.Buttons)
+local Buttons = require("./Buttons")
 
 local function Hook(props)
 	local animationValue, setGoal = ReactOtter.useAnimatedBinding(0, props.onComplete)

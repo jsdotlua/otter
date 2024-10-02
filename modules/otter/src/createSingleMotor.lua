@@ -1,12 +1,10 @@
 --!strict
-local Packages = script.Parent.Parent
-
-local Signal = require(Packages.Signal)
+local Signal = require("./createSignal")
 local createSignal = Signal.createSignal
 
-local AnimationStepSignal = require(script.Parent.AnimationStepSignal)
+local AnimationStepSignal = require("./AnimationStepSignal")
 
-local types = require(script.Parent.types)
+local types = require("./types")
 type AnimationValue = types.AnimationValue
 type Goal<T> = types.Goal<T>
 type State = types.State
@@ -110,19 +108,11 @@ function SingleMotor:setGoal(goal)
 end
 
 function SingleMotor:onStep(callback: MotorCallback<AnimationValue>)
-	local subscription = self.__onStep:subscribe(callback)
-
-	return function()
-		subscription:unsubscribe()
-	end
+	return self.__onStep:connect(callback):disconnectOnceFn()
 end
 
 function SingleMotor:onComplete(callback: MotorCallback<AnimationValue>)
-	local subscription = self.__onComplete:subscribe(callback)
-
-	return function()
-		subscription:unsubscribe()
-	end
+	return self.__onComplete:connect(callback):disconnectOnceFn()
 end
 
 function SingleMotor:destroy()

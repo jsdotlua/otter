@@ -1,13 +1,11 @@
 --!strict
-local Packages = script.Parent.Parent
-
-local Object = require(Packages.Collections).Object
-local Signal = require(Packages.Signal)
+local Object = require("@pkg/@jsdotlua/collections").Object
+local Signal = require("./createSignal")
 local createSignal = Signal.createSignal
 
-local AnimationStepSignal = require(script.Parent.AnimationStepSignal)
+local AnimationStepSignal = require("./AnimationStepSignal")
 
-local types = require(script.Parent.types)
+local types = require("./types")
 type AnimationValue = types.AnimationValue
 type Goal<T> = types.Goal<T>
 type State = types.State
@@ -161,19 +159,11 @@ function GroupMotor:setGoal(goals: GoalGroup)
 end
 
 function GroupMotor:onStep(callback: MotorCallback<ValueGroup>)
-	local subscription = self.__onStep:subscribe(callback)
-
-	return function()
-		subscription:unsubscribe()
-	end
+	return self.__onStep:connect(callback):disconnectOnceFn()
 end
 
 function GroupMotor:onComplete(callback: MotorCallback<ValueGroup>)
-	local subscription = self.__onComplete:subscribe(callback)
-
-	return function()
-		subscription:unsubscribe()
-	end
+	return self.__onComplete:connect(callback):disconnectOnceFn()
 end
 
 function GroupMotor:destroy()

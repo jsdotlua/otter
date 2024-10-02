@@ -1,4 +1,4 @@
-std = "roblox"
+std = "selene_defs+roblox"
 
 [rules]
 # Allow use of global for test configuration

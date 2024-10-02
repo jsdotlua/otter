@@ -1,9 +1,8 @@
 --!strict
-local Packages = script.Parent.Parent.Parent
-local Otter = require(Packages.Otter)
-local React = require(Packages.React)
+local Otter = require("@pkg/@jsdotlua/otter")
+local React = require("@pkg/@jsdotlua/react")
 
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require("@pkg/@jsdotlua/jest-globals")
 local it = JestGlobals.it
 local describe = JestGlobals.describe
 local expect = JestGlobals.expect
@@ -12,11 +11,11 @@ local beforeAll = JestGlobals.beforeAll
 local afterAll = JestGlobals.afterAll
 local afterEach = JestGlobals.afterEach
 
-local ReactTestingLibrary = require(Packages.Dev.ReactTestingLibrary)
+local ReactTestingLibrary = require("@pkg/@jsdotlua/react-testing-library")
 local render = ReactTestingLibrary.render
 local cleanup = ReactTestingLibrary.cleanup
 
-local useAnimatedBinding = require(script.Parent.Parent.useAnimatedBinding)
+local useAnimatedBinding = require("../useAnimatedBinding")
 
 type AnimationType = "Spring" | "Ease"
 type AnimationTypes = { { animationType: AnimationType } }

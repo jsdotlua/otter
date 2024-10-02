@@ -1,0 +1,25 @@
+{
+  "name": "@jsdotlua/otter",
+  "version": "1.2.1",
+  "description": "Declarative animation library for Luau built around (but not limited to) springs",
+  "author": "Roblox",
+  "homepage": "https://github.com/jsdotlua/otter#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsdotlua/otter.git",
+    "directory": "packages/otter"
+  },
+  "keywords": [
+    "luau",
+    "animation"
+  ],
+  "main": "src/init.lua",
+  "dependencies": {
+    "@jsdotlua/collections": "^1.2.7",
+    "luau-signal": "^0.1.0"
+  },
+  "devDependencies": {
+    "@jsdotlua/jest": "^3.6.1-rc.2",
+    "@jsdotlua/jest-globals": "^3.6.1-rc.2"
+  }
+}
