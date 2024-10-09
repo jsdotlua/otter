@@ -1,12 +1,11 @@
 --!strict
-local Packages = script.Parent.Parent
-local React = require(Packages.React)
+local React = require("@pkg/@jsdotlua/react")
 type Binding<T> = React.Binding<T>
 
-local Otter = require(Packages.Otter)
+local Otter = require("@pkg/@jsdotlua/otter")
 type Callback<T> = Otter.MotorCallback<T>
 
-local useMotor = require(script.Parent.useMotor)
+local useMotor = require("./useMotor")
 type SetGoal<G> = useMotor.SetGoal<G>
 
 local function useAnimatedBinding<V, G>(initialValue: V, onComplete: Callback<V>?): (Binding<V>, SetGoal<G>)

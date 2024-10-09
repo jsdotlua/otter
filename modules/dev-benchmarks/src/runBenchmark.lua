@@ -1,11 +1,9 @@
 --!strict
-local Packages = script.Parent.Parent
+local Otter = require("@pkg/@jsdotlua/react-otter")
+local React = require("@pkg/@jsdotlua/react")
+local ReactRoblox = require("@pkg/@jsdotlua/react-roblox")
 
-local Otter = require(Packages.Otter)
-local React = require(Packages.React)
-local ReactRoblox = require(Packages.ReactRoblox)
-
-local measureAndReport = require(script.Parent.measureAndReport)
+local measureAndReport = require("./measureAndReport")
 
 local STEP_COUNT = 10000
 

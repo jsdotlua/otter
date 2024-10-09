@@ -1,7 +1,6 @@
 --!strict
-local Packages = script.Parent.Parent
-local React = require(Packages.React)
-local Otter = require(Packages.Otter)
+local React = require("@pkg/@jsdotlua/react")
+local Otter = require("@pkg/@jsdotlua/otter")
 type Callback<T> = Otter.MotorCallback<T>
 type Motor<G, V> = Otter.Motor<G, V>
 

@@ -1,12 +1,11 @@
 --!strict
-local Packages = script.Parent.Parent.Parent
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require("@pkg/@jsdotlua/jest-globals")
 
 local it = JestGlobals.it
 local describe = JestGlobals.describe
 local expect = JestGlobals.expect
 
-local spring = require(script.Parent.Parent.spring)
+local spring = require("../spring")
 
 it("should have all expected APIs", function()
 	expect(spring).toEqual(expect.any("function"))

@@ -1,6 +1,5 @@
-local Packages = script.Parent.Parent.Parent
-local ReactOtter = require(Packages._Workspace.ReactOtter.ReactOtter)
-local React = require(Packages._Workspace.ReactOtter.React)
+local ReactOtter = require("@pkg/@jsdotlua/react-otter")
+local React = require("@pkg/@jsdotlua/react")
 
 local SPRING_CONFIG = {
 	dampingRatio = 1,

@@ -1,7 +1,27 @@
+[![checks](https://github.com/jsdotlua/otter/actions/workflows/test.yml/badge.svg)](https://github.com/jsdotlua/otter/actions/workflows/test.yml)
+![version](https://img.shields.io/github/package-json/v/jsdotlua/otter)
+[![GitHub top language](https://img.shields.io/github/languages/top/jsdotlua/otter)](https://github.com/luau-lang/luau)
+![license](https://img.shields.io/npm/l/@jsdotlua/otter)
+![npm](https://img.shields.io/npm/dt/@jsdotlua/otter)
+
 # Otter
 
 
 ## Installation
+
+### Using npm
+
+Add `@jsdotlua/otter` in your dependencies:
+
+```bash
+yarn add @jsdotlua/otter
+```
+
+Or if you are using `npm`:
+
+```bash
+npm install @jsdotlua/otter
+```
 
 ### Filesystem
 
@@ -10,7 +30,7 @@
 
 ### Model File
 
-- Download the `rbxmx` model file attached to the latest release from the [GitHub releases page](https://github.com/Roblox/otter-internal/releases)
+- Download the `rbxm` model file attached to the latest release from the [GitHub releases page](https://github.com/Roblox/otter-internal/releases)
 - Insert the model into Studio into a place like `ReplicatedStorage`
 
 ## Documentation
@@ -34,7 +54,7 @@ local motor = Otter.createSingleMotor(0)
 motor:setGoal(Otter.spring(50))
 
 motor:onStep(function(value)
-	object.Position = UDim2.new(0, value, 0, 0)
+    object.Position = UDim2.new(0, value, 0, 0)
 end)
 
 -- Once started, our motor will run every frame until it reaches its goal.
@@ -49,18 +69,18 @@ object.Size = UDim2.new(0, 50, 0, 50)
 
 -- Our initial value is { x = 0, y = 0 }.
 local multimotor = Otter.createGroupMotor({
-	x = 0,
-	y = 0,
+    x = 0,
+    y = 0,
 })
 
 -- We're moving to { x = 50, y = 50 } with a spring on the X axis.
 multimotor:setGoal({
-	x = Otter.spring(50),
-	y = Otter.instant(50),
+    x = Otter.spring(50),
+    y = Otter.instant(50),
 })
 
 multimotor:onStep(function(values)
-	object.Position = UDim2.new(0, values.x, 0, values.y)
+    object.Position = UDim2.new(0, values.x, 0, values.y)
 end)
 
 -- Start your engine!
@@ -77,8 +97,8 @@ motor:setGoal(Otter.instant(100))
 
 -- Spring on both axes to 300
 multimotor:setGoal({
-	x = Otter.spring(300),
-	y = Otter.spring(300),
+    x = Otter.spring(300),
+    y = Otter.spring(300),
 })
 ```
 

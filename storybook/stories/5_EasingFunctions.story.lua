@@ -1,7 +1,7 @@
-local Packages = script.Parent.Parent.Parent
-local ReactOtter = require(Packages._Workspace.ReactOtter.ReactOtter)
-local React = require(Packages._Workspace.ReactOtter.React)
-local Dash = require(Packages._Workspace.ReactOtter.Dash)
+local ReactOtter = require("@pkg/@jsdotlua/react-otter")
+local React = require("@pkg/@jsdotlua/react")
+local Collections = require("@pkg/@jsdotlua/collections")
+local Array = Collections.Array
 
 local function EasingFunction(easingStyle: Enum.EasingStyle)
 	local toggled, setToggled = React.useState(false)
@@ -64,7 +64,7 @@ end
 return {
 	name = "Easing Functions",
 	summary = "A frame that animates the background in based on a particular easing style when clicked",
-	stories = Dash.map(Enum.EasingStyle:GetEnumItems(), function(easingStyle)
+	stories = Array.map(Enum.EasingStyle:GetEnumItems(), function(easingStyle)
 		return {
 			name = easingStyle.Name,
 			story = function(props)

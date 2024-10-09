@@ -1,6 +1,5 @@
 --!strict
-local Packages = script.Parent.Parent.Parent
-local Otter = require(Packages.Otter)
+local Otter = require("@pkg/@jsdotlua/react-otter")
 
 local function randomSpringGoal()
 	return Otter.spring(math.random() * 1000, {

@@ -5,10 +5,9 @@
 	Adapted from
 	https://gist.github.com/Fraktality/1033625223e13c01aa7144abe4aaf54d
 ]]
-local Packages = script.Parent.Parent
-local assign = require(Packages.Collections).Object.assign
+local assign = require("@pkg/@jsdotlua/collections").Object.assign
 
-local types = require(script.Parent.types)
+local types = require("./types")
 type State = types.State
 type Goal<T> = types.Goal<T>
 

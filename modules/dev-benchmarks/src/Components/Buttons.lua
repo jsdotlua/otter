@@ -1,6 +1,5 @@
 --!strict
-local Packages = script.Parent.Parent.Parent
-local React = require(Packages.React)
+local React = require("@pkg/@jsdotlua/react")
 
 local function Buttons(_)
 	return React.createElement(

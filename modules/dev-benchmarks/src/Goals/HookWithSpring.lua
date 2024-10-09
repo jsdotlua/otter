@@ -1,13 +1,12 @@
 --!strict
-local Packages = script.Parent.Parent.Parent
-local React = require(Packages.React)
-local Otter = require(Packages.Otter)
-local ReactOtter = require(Packages.ReactOtter)
-local ReactRoblox = require(Packages.ReactRoblox)
+local Otter = require("@pkg/@jsdotlua/react-otter")
+local React = require("@pkg/@jsdotlua/react")
+local ReactOtter = require("@pkg/@jsdotlua/react-otter")
+local ReactRoblox = require("@pkg/@jsdotlua/react-roblox")
 
-local randomSpringGoal = require(script.Parent.randomSpringGoal)
-local Buttons = require(script.Parent.Parent.Components.Buttons)
-local measureAndReport = require(script.Parent.Parent.measureAndReport)
+local Buttons = require("../Components/Buttons")
+local measureAndReport = require("../measureAndReport")
+local randomSpringGoal = require("./randomSpringGoal")
 
 local STEP_COUNT = 10000
 

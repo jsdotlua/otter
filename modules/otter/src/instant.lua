@@ -1,5 +1,5 @@
 --!strict
-local types = require(script.Parent.types)
+local types = require("./types")
 type Goal = types.Goal
 
 local function instant(targetValue): Goal

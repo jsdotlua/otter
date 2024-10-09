@@ -1,11 +1,10 @@
 --!strict
-local Packages = script.Parent.Parent.Parent
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require("@pkg/@jsdotlua/jest-globals")
 
 local it = JestGlobals.it
 local expect = JestGlobals.expect
 
-local instant = require(script.Parent.Parent.instant)
+local instant = require("../instant")
 
 it("should have the expected APIs", function()
 	local goal = instant(5)

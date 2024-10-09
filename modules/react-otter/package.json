@@ -1,0 +1,27 @@
+{
+  "name": "@jsdotlua/react-otter",
+  "version": "1.2.1",
+  "description": "An interface to use Otter with React",
+  "author": "Roblox",
+  "homepage": "https://github.com/jsdotlua/otter#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsdotlua/otter.git",
+    "directory": "packages/react-otter"
+  },
+  "keywords": [
+    "luau",
+    "animation",
+    "react"
+  ],
+  "main": "src/init.lua",
+  "dependencies": {
+    "@jsdotlua/otter": "workspace:^",
+    "@jsdotlua/react": "^17.1.0"
+  },
+  "devDependencies": {
+    "@jsdotlua/jest": "^3.6.1-rc.2",
+    "@jsdotlua/jest-globals": "^3.6.1-rc.2",
+    "@jsdotlua/react-testing-library": "^12.2.1-rc.1"
+  }
+}

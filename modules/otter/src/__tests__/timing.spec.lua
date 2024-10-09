@@ -1,5 +1,4 @@
-local Packages = script.Parent.Parent.Parent
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require("@pkg/@jsdotlua/jest-globals")
 
 local it = JestGlobals.it
 local describe = JestGlobals.describe
@@ -13,8 +12,8 @@ local createSingleMotor, spring, AnimationStepSignal
 describe("real time", function()
 	beforeAll(function()
 		jest.resetModules()
-		createSingleMotor = require(script.Parent.Parent.createSingleMotor)
-		spring = require(script.Parent.Parent.spring)
+		createSingleMotor = require("../createSingleMotor")
+		spring = require("../spring")
 	end)
 
 	it("should step through springs", function()
@@ -46,9 +45,9 @@ describe("mock timers", function()
 	beforeAll(function()
 		_G.__OTTER_MOCK_ANIMATION_STEP_SIGNAL__ = true
 		jest.resetModules()
-		createSingleMotor = require(script.Parent.Parent.createSingleMotor)
-		spring = require(script.Parent.Parent.spring)
-		AnimationStepSignal = require(script.Parent.Parent.AnimationStepSignal)
+		createSingleMotor = require("../createSingleMotor")
+		spring = require("../spring")
+		AnimationStepSignal = require("../AnimationStepSignal")
 	end)
 
 	afterAll(function()

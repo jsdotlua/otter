@@ -1,6 +1,5 @@
 --!strict
-local Packages = script.Parent.Parent.Parent
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require("@pkg/@jsdotlua/jest-globals")
 
 local expect = JestGlobals.expect
 

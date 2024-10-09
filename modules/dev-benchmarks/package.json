@@ -1,0 +1,24 @@
+{
+  "name": "@jsdotlua/otter-benchmarks",
+  "private": true,
+  "version": "0.1.0",
+  "author": "Roblox",
+  "homepage": "https://github.com/jsdotlua/otter#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsdotlua/otter.git",
+    "directory": "packages/dev-benchmarks"
+  },
+  "keywords": [
+    "luau",
+    "animation"
+  ],
+  "main": "src/init.lua",
+  "dependencies": {
+    "@jsdotlua/otter": "workspace:^",
+    "@jsdotlua/react": "^17.1.0",
+    "@jsdotlua/react-otter": "workspace:^",
+    "@jsdotlua/react-roblox": "^17.1.0",
+    "@jsdotlua/roact-compat": "^17.1.0"
+  }
+}

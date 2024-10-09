@@ -1,5 +1,4 @@
-local Packages = script.Parent.Parent
-local Roact = require(Packages._Workspace.ReactOtter.Dev.RoactCompat)
+local Roact = require("@pkg/@jsdotlua/roact-compat")
 
 return {
 	name = "React + Otter",

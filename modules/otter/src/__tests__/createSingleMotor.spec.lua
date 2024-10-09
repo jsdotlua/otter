@@ -1,16 +1,15 @@
 --!strict
-local Packages = script.Parent.Parent.Parent
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require("@pkg/@jsdotlua/jest-globals")
 
 local it = JestGlobals.it
 local describe = JestGlobals.describe
 local expect = JestGlobals.expect
 local jest = JestGlobals.jest
 
-local createStepper = require(script.Parent.createStepper)
-local validateMotor = require(script.Parent.validateMotor)
+local createStepper = require("./createStepper")
+local validateMotor = require("./validateMotor")
 
-local createSingleMotor = require(script.Parent.Parent.createSingleMotor)
+local createSingleMotor = require("../createSingleMotor")
 
 local identityGoal = {
 	step = function(state, _dt)

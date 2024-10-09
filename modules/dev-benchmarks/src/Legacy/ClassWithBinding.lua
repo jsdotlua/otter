@@ -1,9 +1,8 @@
 --!strict
-local Packages = script.Parent.Parent.Parent
-local Otter = require(Packages.Otter)
-local Roact = require(Packages.Roact)
+local Otter = require("@pkg/@jsdotlua/react-otter")
+local Roact = require("@pkg/@jsdotlua/roact-compat")
 
-local Buttons = require(script.Parent.Buttons)
+local Buttons = require("./Buttons")
 
 local ClassWithBinding = Roact.Component:extend("ClassWithBinding")
 

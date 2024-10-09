@@ -1,15 +1,14 @@
 --!strict
 --[[
     Ease functions for creating smooth animations.
-    
+
     Provides different easing functions like linear, quadratic, cubic, quartic, quintic, and more.
     Inspired by Robert Penner's easing functions.
     Supports Roblox EasingStyle.
 ]]
-local Packages = script.Parent.Parent
-local assign = require(Packages.Collections).Object.assign
+local assign = require("@pkg/@jsdotlua/collections").Object.assign
 
-local types = require(script.Parent.types)
+local types = require("./types")
 type State = types.State
 type Goal<T> = types.Goal<T>
 

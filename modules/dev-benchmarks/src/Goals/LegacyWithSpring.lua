@@ -1,12 +1,11 @@
 --!strict
-local Packages = script.Parent.Parent.Parent
-local Otter = require(Packages.Otter)
-local Roact = require(Packages.Roact)
+local Otter = require("@pkg/@jsdotlua/react-otter")
+local Roact = require("@pkg/@jsdotlua/roact-compat")
 
-local measureAndReport = require(script.Parent.Parent.measureAndReport)
+local measureAndReport = require("../measureAndReport")
 
-local randomSpringGoal = require(script.Parent.randomSpringGoal)
-local Buttons = require(script.Parent.Parent.Legacy.Buttons)
+local randomSpringGoal = require("./randomSpringGoal")
+local Buttons = require("../Legacy/Buttons")
 
 local STEP_COUNT = 10000
 

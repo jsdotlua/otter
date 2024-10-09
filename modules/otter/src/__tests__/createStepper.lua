@@ -1,5 +1,5 @@
 --!strict
-local types = require(script.Parent.Parent.types)
+local types = require("../types")
 type Goal = types.Goal
 
 -- test motion object that completes after step has been called numSteps times

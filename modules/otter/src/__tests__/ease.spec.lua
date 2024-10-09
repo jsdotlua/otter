@@ -1,11 +1,10 @@
-local Packages = script.Parent.Parent.Parent
-local JestGlobals = require(Packages.Dev.JestGlobals)
+local JestGlobals = require("@pkg/@jsdotlua/jest-globals")
 
 local it = JestGlobals.it
 local describe = JestGlobals.describe
 local expect = JestGlobals.expect
 
-local ease = require(script.Parent.Parent.ease)
+local ease = require("../ease")
 
 describe("Easing functions", function()
 	it.each(Enum.EasingStyle:GetEnumItems())("should handle easing style $Name", function(args)
